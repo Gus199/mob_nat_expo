@@ -1,12 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeBaseProvider, Box, Container} from "native-base";
+import ProductContainer from './Screens/Products/ProductContainer';
+import Header from './Shared/Header';
+
+
 
 export default function App() {
-  return (
+  return ( <NativeBaseProvider>
+   
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   
+    <Header />
+   
+    <ProductContainer />
+    
+  </View>
+
+  </NativeBaseProvider>
   );
 }
 
